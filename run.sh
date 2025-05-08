@@ -1,6 +1,6 @@
 sudo systemd-nspawn \
-  --directory=./root \
-  --ephemeral \
+  --template=./root \
+  --directory=root-$(date -Isec) \
   --boot \
   --private-network \
   --network-veth \
