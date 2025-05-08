@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -x -e
+
 sudo systemd-nspawn \
   --template=./root \
   --directory=root-$(date -Isec) \
