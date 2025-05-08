@@ -1,5 +1,9 @@
 ## 使用说明
 
+`git clone git@github.com:reusee/local-moi.git`
+
+local-moi 所在目录，最好是 btrfs 文件系统，因为依赖快照功能，其他文件系统并不支持。
+
 ### prepare.sh
 
 这个脚本会安装 debootstrap，以及在 root 目录构造文件系统模板
