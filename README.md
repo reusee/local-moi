@@ -2,7 +2,7 @@
 
 ### prepare.sh
 
-这个脚本会安装 debootstrap，以及构造文件系统模板
+这个脚本会安装 debootstrap，以及在 root 目录构造文件系统模板
 
 如果宿主系统不是 fedora，可以改成其他方式安装 debootstrap
 
@@ -10,7 +10,7 @@
 
 ### run.sh
 
-这个脚本会以 prepare.sh 构造的文件系统为模板，启动一个新系统
+这个脚本会以当前 root 目录为模板，创建一个新的根文件系统，并启动
 
 新系统的根文件系统在单独的目录，命名是 root-$(date -Isec)
 
