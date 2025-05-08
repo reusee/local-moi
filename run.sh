@@ -13,10 +13,14 @@ else
   DIRARGS="--directory=$DIR"
 fi
 
+MO_OVERLAYS="
+--overlay=$MO_DIR:/root/matrixone
+--overlay=$MOI_DIR:/root/matrixflow
+"
+
 # run
 sudo systemd-nspawn \
   $DIRARGS \
   --boot \
-  --overlay=$MO_DIR:/root/matrixone \
-  --overlay=$MOI_DIR:/root/matrixflow \
+  $MO_OVERLAYS \
 
