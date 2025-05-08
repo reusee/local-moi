@@ -32,7 +32,7 @@ MO_DIR, MOI_DIR 会被加载到 /root 目录
 
 root-* 目录如果不需要了，可以直接删除
 
-### 工作原理
+## 工作原理
 
 systemd-nspawn 的 --template 参数，会以参数值为模板，创建一个文件系统的快照，作为新系统的根目录，并结合多个 --overlay 参数，将代码仓库加载到新系统的 /root 目录下，然后通过 systemd service，启动各个服务
 
