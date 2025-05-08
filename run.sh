@@ -2,6 +2,8 @@
 
 set -x -e
 
+. config
+
 # root dir
 if [ -z "$1" ]; then
   DIR="./root-$(date -Isec)"
@@ -15,4 +17,6 @@ fi
 sudo systemd-nspawn \
   $DIRARGS \
   --boot \
+  --overlay=$MO_DIR:/root/matrixone \
+  --overlay=$MOI_DIR:/root/matrixflow \
 

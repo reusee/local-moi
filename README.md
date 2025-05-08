@@ -8,11 +8,23 @@
 
 中间会要求设置 root 密码。这个是新系统的 root 密码，和宿主系统无关
 
+### 配置
+
+运行 run.sh 之前，需要修改 config 文件
+
+MO_DIR 指向 matrixone 仓库路径
+
+MOI_DIR 指向 matrixflow 仓库路径
+
 ### run.sh
 
 这个脚本会以当前 root 目录为模板，创建一个新的根文件系统，并启动
 
 新系统的根文件系统在单独的目录，命名是 root-$(date -Isec)
+
+MO_DIR, MOI_DIR 会被加载到 /root 目录
+
+对加载的目录的修改，不会影响宿主机器上的目录
 
 在新系统环境下，按住 ctrl，再按三下 ']' 键，可以退出
 
