@@ -12,9 +12,9 @@
 
 运行 run.sh 之前，需要修改 config 文件
 
-MO_DIR 指向 matrixone 仓库路径
+MO_DIR 指向 matrixone 仓库本地路径
 
-MOI_DIR 指向 matrixflow 仓库路径
+MOI_DIR 指向 matrixflow 仓库本地路径
 
 ### run.sh
 
