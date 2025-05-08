@@ -16,5 +16,3 @@ sudo debootstrap --cache-dir=$CACHEDIR noble $ROOTDIR https://mirrors.cloud.tenc
 echo "set root password"
 sudo systemd-nspawn -D ./root passwd
 
-# copy overlays
-sudo rsync -a overlays/ $ROOTDIR

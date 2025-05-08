@@ -2,12 +2,17 @@
 
 set -x -e
 
+# root dir
 if [ -z "$1" ]; then
-  DIR="--template=./root --directory=root-$(date -Isec)"
+  DIR="./root-$(date -Isec)"
+  DIRARGS="--template=./root --directory=$DIR"
 else
-  DIR="--directory=$1"
+  DIR="$1"
+  DIRARGS="--directory=$DIR"
 fi
 
+# run
 sudo systemd-nspawn \
-  $DIR \
+  $DIRARGS \
   --boot \
+
